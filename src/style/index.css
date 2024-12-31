@@ -1,0 +1,17 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --background-color:#ffffff;
+  --primary-color:#fff;
+  --secondary-color-1:#75aaad;
+  --secondary-color-2:#2b2b2b;
+  --half-space-unit:0.5rem;
+  --single-space-unit:1rem;
+  --single-half-space-unit:1.5rem;
+  --double-space-unit:2rem;
+  --double-half-space-unit:2.5rem;
+}

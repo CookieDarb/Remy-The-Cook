@@ -1,0 +1,15 @@
+header{
+    background-color: var(--background-color);
+    padding:var(--single-space-unit);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--half-space-unit);
+    font-family: 'quicksand';
+    font-size: 1.5rem;
+    font-weight: 500;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.10), 0px 1px 2px 0px rgba(0,0,0,0.06);
+}
+
