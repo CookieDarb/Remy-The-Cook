@@ -6,12 +6,21 @@
 
 :root{
   --background-color:#ffffff;
-  --primary-color:#fff;
-  --secondary-color-1:#75aaad;
-  --secondary-color-2:#2b2b2b;
+  --primary-color:#fAfAf8;
+  --secondary-color-1:#141413;
+  --secondary-color-2:#fAfAf8;
   --half-space-unit:0.5rem;
   --single-space-unit:1rem;
   --single-half-space-unit:1.5rem;
   --double-space-unit:2rem;
   --double-half-space-unit:2.5rem;
+}
+
+body{
+  background:url("images/bg1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "quicksand";
 }

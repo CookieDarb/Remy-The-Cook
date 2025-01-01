@@ -1,0 +1,51 @@
+main{
+    padding: var(--single-half-space-unit) var(--single-space-unit);
+    padding-top: var(--double-space-unit);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:var(--double-space-unit)
+}
+
+.welcome-message{
+    background-color: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: var(--single-space-unit);
+    border-radius: var(--half-space-unit) ;
+}
+
+.Remy{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--half-space-unit);
+    align-items: center;
+    margin-bottom: var(--half-space-unit);
+    font-weight: 500;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--half-space-unit);
+}
+
+form input{
+    padding: var(--half-space-unit);
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: var(--half-space-unit);
+    background-color: var(--secondary-color-2);
+}
+
+form button{
+    padding: var(--half-space-unit) var(--single-space-unit);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: var(--secondary-color-1);
+    border: none;
+    outline: none;
+    border-radius: var(--half-space-unit);
+    color: var(--background-color);
+}
