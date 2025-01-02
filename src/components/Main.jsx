@@ -12,7 +12,6 @@ export default function Main(){
     function addIngredient(formData){
         const newIngredient=formData.get("ingredient")
         setIngredients(prevIngredients=>[...prevIngredients, newIngredient])
-        console.log(formData)
     }
 
     return(
