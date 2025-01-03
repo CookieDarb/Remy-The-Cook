@@ -52,7 +52,7 @@ form button{
     width: 70px;
 }
 
-.ingredients-list-container h2{
+.Remy-message h2{
     font-size: var(--single-half-space-unit);
     font-weight: 500;
     margin-bottom: var(--half-space-unit);
@@ -70,7 +70,7 @@ form button{
     margin-right: 8px;
 }
 
-.get-recipe-container h3{
+.get-recipe-container h3, .suggested-recipe-container h3{
     font-weight: 550;
     margin-bottom: var(--half-space-unit);
 }
@@ -107,3 +107,17 @@ form button{
     background-color:rgba(255, 0, 0, 0.8);
 }
 
+.suggested-recipe-container{
+    display: flex;
+    flex-direction: column;
+    gap:var(--single-space-unit);
+}
+
+.suggested-recipe-container li{
+    margin-bottom: var(--half-space-unit);
+    list-style-position: inside;
+}
+
+.suggested-recipe-container strong{
+    font-weight: 600;
+}

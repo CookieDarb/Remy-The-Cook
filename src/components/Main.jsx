@@ -1,9 +1,11 @@
 import '/src/style/Main.css'
+import Recipe from './Recipe'
 import React from "react"
 
 export default function Main(){
 
-    const [ingredients,setIngredients]=React.useState([])
+    const [ingredients,setIngredients]=React.useState(["Bread","Potato","Onion","Mayo","Spices","Coriander"])
+    const [recipeShown,setRecipeShown]=React.useState(false)
 
     const ingredientsArray=ingredients.map(item=>{
         return <li key={item}> <span>{item}</span> <button onClick={() => removeIngredient(item)}>-</button> </li>
@@ -23,10 +25,10 @@ export default function Main(){
             return(
                 <div className="get-recipe-container">
                     <div className='get-recipe-content'>
-                        <h3>Feeling inspired?</h3>
+                        <h3>Ready for a recipe?</h3>
                         <p>Let Remy whip up something delightful with these ingredients.</p>
                     </div>
-                    <button>Cook with Remy!</button>
+                    <button onClick={displayRecipe}>Cook with Remy!</button>
                 </div>
             )
         }
@@ -44,9 +46,12 @@ export default function Main(){
         )
     }
 
+    function displayRecipe(){
+        setRecipeShown(true)
+    }
+
     return(
         <main>
-            
             <div className='welcome-message Remy-message'>
                 {Remy()}
                 <p>Oh, welcome! I guess you're here for a little help whipping up something delicious, huh? Great! Just list the ingredients you’ve got down below, and we’ll cook up some magic!</p>
@@ -62,6 +67,8 @@ export default function Main(){
                 <ul className="ingredients-list" aria-live="polite">{ingredientsArray}</ul>
                 {getRecipeContainer()}
             </section>:""}
+
+            {recipeShown && <Recipe />}
 
         </main>
     )
