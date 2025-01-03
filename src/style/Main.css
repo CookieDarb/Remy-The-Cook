@@ -7,7 +7,7 @@ main{
     gap:var(--double-space-unit)
 }
 
-.welcome-message{
+.Remy-message{
     background-color: rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
     padding: var(--single-space-unit);
@@ -51,3 +51,59 @@ form button{
     color: var(--background-color);
     width: 70px;
 }
+
+.ingredients-list-container h2{
+    font-size: var(--single-half-space-unit);
+    font-weight: 500;
+    margin-bottom: var(--half-space-unit);
+}
+
+.ingredients-list {
+    list-style: none;
+    margin-bottom: var(--single-space-unit);
+}
+
+.ingredients-list li::before {
+    content: "• ";
+    color: black;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.get-recipe-container h3{
+    font-weight: 550;
+    margin-bottom: var(--half-space-unit);
+}
+
+.get-recipe-content{
+    margin-bottom: var(--single-space-unit);
+} 
+
+.get-recipe-container button{
+    border: none;
+    outline: none;
+    padding: var(--half-space-unit) var(--single-space-unit);
+    color:var(--background-color);
+    background-color:cornflowerblue;
+    border-radius:var(--half-space-unit) ;
+}
+
+.ingredients-list li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: var(--half-space-unit);
+}
+
+.ingredients-list li span{
+    flex-grow: 1;
+}
+
+.ingredients-list li button{
+    width: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color:rgba(255, 0, 0, 0.8);
+}
+
