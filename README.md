@@ -1,8 +1,16 @@
-# React + Vite
+# Remy the Cook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Remy the Cook is a fun and interactive web application that helps you create recipes based on the ingredients you have on hand. Simply list your ingredients, and Remy will use AI to suggest a delicious recipe!
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Ingredient Management**: Add and remove ingredients as you go.
+- **AI-Powered Recipe Suggestions**: Powered by Hugging Face's **Mistral** model, Remy generates recipe suggestions based on the ingredients you provide.
+- **Interactive UI**: Get a friendly welcome message from Remy and see the generated recipe in markdown format.
+- **Responsive Design**: Works seamlessly on mobile, tablet, and desktop devices.
+
+## Tech Stack
+
+- **Frontend**: React, React Markdown
+- **AI Integration**: Hugging Face's **Mistral** model via the Inference API
+- **CSS**: Custom styles with modern design using Flexbox and media queries
