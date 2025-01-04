@@ -1,5 +1,5 @@
 header{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(1, 1, 1, 0.1);
     padding:var(--single-space-unit);
     display: flex;
     flex-direction: row;
@@ -12,5 +12,6 @@ header{
     font-weight: 500;
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.10), 0px 1px 2px 0px rgba(0,0,0,0.06);
     backdrop-filter: blur(5px);
+    color: white;
 }
 

@@ -1,11 +1,13 @@
 import '/src/style/Main.css'
 import Recipe from './Recipe'
 import React from "react"
+import { getRecipeFromMistral } from '../../ai'
 
 export default function Main(){
 
-    const [ingredients,setIngredients]=React.useState(["Bread","Potato","Onion","Mayo","Spices","Coriander"])
-    const [recipeShown,setRecipeShown]=React.useState(false)
+    const [ingredients,setIngredients]=React.useState([])
+    const [recipe,setRecipe]=React.useState("")
+    const [waitMessage,setWaitMessage]=React.useState(false)
 
     const ingredientsArray=ingredients.map(item=>{
         return <li key={item}> <span>{item}</span> <button onClick={() => removeIngredient(item)}>-</button> </li>
@@ -29,6 +31,7 @@ export default function Main(){
                         <p>Let Remy whip up something delightful with these ingredients.</p>
                     </div>
                     <button onClick={displayRecipe}>Cook with Remy!</button>
+                    {(waitMessage) && <p>Please wait while Remy works his magic!</p>}
                 </div>
             )
         }
@@ -46,8 +49,11 @@ export default function Main(){
         )
     }
 
-    function displayRecipe(){
-        setRecipeShown(true)
+    async function displayRecipe(){
+        setWaitMessage(true)
+        const recipeMarkdown=await getRecipeFromMistral(ingredients)
+        setRecipe(recipeMarkdown)
+        setWaitMessage(false)
     }
 
     return(
@@ -68,7 +74,7 @@ export default function Main(){
                 {getRecipeContainer()}
             </section>:""}
 
-            {recipeShown && <Recipe />}
+            {recipe && <Recipe recipe={recipe}/>}
 
         </main>
     )

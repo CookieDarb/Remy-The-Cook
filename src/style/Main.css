@@ -8,10 +8,11 @@ main{
 }
 
 .Remy-message{
-    background-color: rgba(255,255,255,0.08);
+    background-color: rgba(0,0,0,0.1);
     backdrop-filter: blur(10px);
     padding: var(--single-space-unit);
     border-radius: var(--half-space-unit) ;
+    color:white;
 }
 
 .Remy{
@@ -70,7 +71,7 @@ form button{
     margin-right: 8px;
 }
 
-.get-recipe-container h3, .suggested-recipe-container h3{
+.get-recipe-container h3, .recipe-container h3{
     font-weight: 550;
     margin-bottom: var(--half-space-unit);
 }
@@ -86,6 +87,7 @@ form button{
     color:var(--background-color);
     background-color:cornflowerblue;
     border-radius:var(--half-space-unit) ;
+    margin-bottom: var(--single-space-unit);
 }
 
 .ingredients-list li{
@@ -107,19 +109,23 @@ form button{
     background-color:rgba(255, 0, 0, 0.8);
 }
 
-.suggested-recipe-container{
+.recipe-container{
     display: flex;
     flex-direction: column;
     gap:var(--single-space-unit);
 }
 
-.suggested-recipe-container li{
+.recipe-container li{
     margin-bottom: var(--half-space-unit);
     list-style-position: inside;
 }
 
-.suggested-recipe-container strong{
+.recipe-container strong{
     font-weight: 600;
+}
+
+button:hover{
+    opacity: 0.7;
 }
 
 @media screen and (min-width:375px){
