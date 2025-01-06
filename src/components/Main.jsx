@@ -8,6 +8,7 @@ export default function Main(){
     const [ingredients,setIngredients]=React.useState([])
     const [recipe,setRecipe]=React.useState("")
     const [waitMessage,setWaitMessage]=React.useState(false)
+    const recipeSection=React.useRef(null)
 
     const ingredientsArray=ingredients.map(item=>{
         return <li key={item}> <span>{item}</span> <button onClick={() => removeIngredient(item)}>-</button> </li>
@@ -26,7 +27,7 @@ export default function Main(){
         if(ingredientsArray.length>3){
             return(
                 <div className="get-recipe-container">
-                    <div className='get-recipe-content'>
+                    <div className='get-recipe-content' ref={recipeSection}>
                         <h3>Ready for a recipe?</h3>
                         <p>Let Remy whip up something delightful with these ingredients.</p>
                     </div>
@@ -53,8 +54,15 @@ export default function Main(){
         setWaitMessage(true)
         const recipeMarkdown=await getRecipeFromMistral(ingredients)
         setRecipe(recipeMarkdown)
+        console.log(recipeMarkdown)
         setWaitMessage(false)
     }
+
+    React.useEffect(()=>{
+        if(recipeSection.current && recipe){
+            recipeSection.current.scrollIntoView({behavior:"smooth"})
+        }
+    },[recipe])
 
     return(
         <main>
