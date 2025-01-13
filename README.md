@@ -15,4 +15,5 @@ Remy the Cook is a fun and interactive web application that helps you create rec
 - **AI Integration**: Hugging Face's **Mistral** model via the Inference API
 - **CSS**: Custom styles with modern design using Flexbox and media queries
 
-![image](https://github.com/user-attachments/assets/06976db6-d1a4-455e-b21e-b607b3759555)
+![Screenshot 2025-01-13 171639](https://github.com/user-attachments/assets/76c5eb76-b4b4-449f-bab0-16c76a0f7ca5)
+
